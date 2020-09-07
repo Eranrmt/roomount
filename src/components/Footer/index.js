@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text } from 'evergreen-ui';
-import { Outer, Wrapper, FooterLink } from './styles';
+import { Outer, Wrapper, FooterLink, BlogLink } from './styles';
 
 export const Footer = () => (
   <Outer>
@@ -9,6 +9,8 @@ export const Footer = () => (
       <FooterLink to="/terms-of-use"><Text>Terms of use</Text></FooterLink>
       <FooterLink to="/faq"><Text>FAQ</Text></FooterLink>
       <FooterLink to="/contact-us"><Text>Contact Us</Text></FooterLink>
-    </Wrapper>
+      <BlogLink to="/blog"><Text id="a">Blog</Text></BlogLink>
+     </Wrapper>
+        
   </Outer>
 );

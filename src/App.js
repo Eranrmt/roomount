@@ -8,10 +8,17 @@ import { Pane } from 'evergreen-ui';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Home } from './routes/Home';
+import HOMain from './containers/HotelOwnerContainer' 
 import { SignIn } from './routes/SignIn';
 import { SignUp } from './routes/SignUp';
 import { Reserve } from './routes/Reserve';
 import { messages } from './intl';
+import { HomePage } from './containers/HomePage'
+import { RMPolicy } from './static/RMPolicy'
+import { RMTerms } from './static/RMTerms'
+import { RMFAQ } from './static/RMFAQ'
+import { RMContact } from './static/RMContact'
+
 
 function App() {
   const { locale } = useSelector((state) => state.intl);
@@ -20,16 +27,22 @@ function App() {
     <IntlProvider locale={locale} messages={messages[locale]}>
       <Router>
         <Header />
-        <Pane minHeight="calc(100vh - 120px)">
-          <Switch>
-            <Route path="/route1" component={() => <div>route1</div>} />
-            <Route path="/signin" component={SignIn} />
-            <Route path="/signup" component={SignUp} />
-            <Route path="/hotelInfo/:hotelId" component={Home} />
-            <Route path="/reserve" component={Reserve} />
-            <Route path="/" component={Home} />
-          </Switch>
-        </Pane>
+              <Pane minHeight="calc(100vh - 120px)" maxHeight="calc(100vh - 120px)">
+                  <Switch>
+                    <Route path="/home" component={HomePage} />
+                    <Route path="/home-ho" component={HOMain} />
+                    <Route path="/signin" component={SignIn} />
+                    <Route path="/signup" component={SignUp} />
+                    <Route path="/hotelInfo/:hotelId" component={Home} />
+                    <Route path="/hotelInfo" component={Home} />
+                    <Route path="/reserve" component={Reserve} />
+                    <Route path="/privacy-policy" component={RMPolicy} />
+                    <Route path="/terms-of-use" component={RMTerms} />
+                    <Route path="/faq" component={RMFAQ} />
+                    <Route path="/contact-us" component={RMContact} />
+                      
+                  </Switch>
+               </Pane>
         <Footer />
       </Router>
     </IntlProvider>

@@ -11,6 +11,7 @@ import {
   Outer, Wrapper, UserInfo, LogoWrapper, AvatarContainer, SignInButton, FloatRight, Link,
 } from './styles';
 import { setLocale } from '../../intl/actions';
+import { RMSelect } from '../RMSelect';
 
 const countryToLang = {
   US: 'en',
@@ -35,7 +36,7 @@ export const Header = () => {
   return (
     <Outer elevation={2}>
       <Wrapper>
-        <Link to="/">
+        <Link to="/home">
           <LogoWrapper>
             <Heading>Roomount</Heading>
             <Text size={300}>Same room, better price.</Text>
@@ -48,8 +49,12 @@ export const Header = () => {
             countries={Object.keys(countryToLang)}
             showSelectedLabel={false}
             showOptionLabel={false}
-          />
-        </FloatRight>
+                  />
+                  <RMSelect choices='{ "children": [{"key": "dollar", "display": "$ DLR"},{"key": "ILS","display": "ILS"}] }' />>
+              </FloatRight>
+               
+                 
+             
         <UserInfo>
           {user
             ? (

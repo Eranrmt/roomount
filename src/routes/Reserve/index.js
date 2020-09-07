@@ -1,8 +1,9 @@
 import React from 'react';
 import { useIntl } from 'react-intl';
-import { useSelector, useDispatch } from 'react-redux';
+//import { useSelector, useDispatch } from 'react-redux';
+//Checkbox Paragraph
 import {
-  Pane, Heading, Text, minorScale, Checkbox, Select, TextInputField, Paragraph, Label, Button,
+  Pane, Heading, Text, minorScale,  Select, TextInputField, Label, Button,
 } from 'evergreen-ui';
 import { MOCK_INFO, MOCK_ROOMS } from './mock';
 import {

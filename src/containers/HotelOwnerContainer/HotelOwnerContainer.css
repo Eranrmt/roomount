@@ -1,0 +1,124 @@
+.RMHotelContainer {
+    position: absolute;
+    background-color: transparent;
+    width: 100%;
+    display:block;
+}
+
+.RMHOHeaderRow {
+  display: table;
+  width: 100%;
+  background-color: var(--secondary_header_menu_background);
+  height: 2em;
+  padding: 0.3em 0em 0em 0em; 
+}
+
+.RMHOHeaderItem {
+  display: table-cell;
+  text-align: center;
+  cursor: pointer;
+  font-size: var(--ho_header_font_size);
+  font-weight: var(--ho_header_font_weight);
+}
+
+  .RMHOHeaderItem:hover {
+    color: var( --selected_ho_color);
+  }
+
+.RMHOWorkarea {
+    width: calc(100% - 0em);
+    height: calc(100% - 10em);
+    max-height: 465px;
+    margin-top: 0em;
+    margin-left: 0em;
+    margin-right: 5em;
+    overflow: auto;
+}
+
+.RMHOContentTable {
+  display: table;
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-top: 1em;
+  background-color: var( --color-static-background);
+  width: 100%;
+}
+
+.RMHOContentRow {
+    display: table-row;
+    line-height: 1em;
+}
+
+.RMHOContentCell {
+  display: table-cell;
+  margin-bottom: 0.5em;
+}
+
+.RMHOActionButton {
+
+}
+
+.HOItemInputCell {
+    margin: 0.5em;
+    border-radius: 1em;
+}
+
+.RMHide {
+    display: none;
+}
+
+.RMCheck {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.RMHOHeaderItem[isselected="true"] {
+  color: var( --selected_ho_color);
+}
+
+.RMHOLabel {
+  color: var(--color-label-font);
+  font-weight: var(--weight-label-font);
+}
+
+.RMSelector {
+   width: 100%;
+   width: 100%;
+}
+
+.RMHOTableTopic {
+    font-size: 20px;
+    margin-top: 2em;
+    color: var(--section_title_color);
+}
+
+.RMSectionTable {
+  display: table;
+  margin-top: 0.5em;
+}
+
+.RMSectionHeader {
+  display:table-header-group;
+}
+
+.RMSectionRow {
+  display:table-row;
+}
+
+.RMSectionCell {
+  display: table-cell;
+  border: 1px red solid;
+  text-align: center;
+}
+
+.RMSectionRow:nth-child(odd) {
+  color: var(--section_table_odd_color);
+  background-color: var(--section_table_odd_background_color);
+}
+
+.RMSectionRow:nth-child(even) {
+  color: var(--section_table_even_color);
+  background-color: var(--section_table_even_background_color);
+}
