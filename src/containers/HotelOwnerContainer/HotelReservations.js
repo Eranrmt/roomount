@@ -8,10 +8,11 @@ const INDEX = "4";
 
 const content = {
   item: {
-    topic: "Reservations", headers: [{ name: "ID" }, { name: "Stay Price" }, { name: "Time Submitted" }, { name: "Hotel Response" }, { name: "Check In" }, { name: "Check Out" }, { name: "Num Rooms" }, { name: "Adults" }, { name: "Children" }, { name: "Extra Beds" }, { name: "Canceled" }, { name: "No Show" }, { name: "View" }, { name: "Confirmed" }, { name: "Problem" }], items:
-      [{
+        key: "reservations", topic: "Reservations", headers: [{ name: "ID" }, { name: "Stay Price" }, { name: "Time Submitted" }, { name: "Hotel Response" }, { name: "Check In" }, { name: "Check Out" }, { name: "Num Rooms" }, { name: "Adults" }, { name: "Children" }, { name: "Extra Beds" }, { name: "Canceled" }, { name: "No Show" }, { name: "View" }, { name: "Confirmed" }, { name: "Problem" }], items:
+          [{
+          key: "Res1",
         id: "yyyyyyy",
-        stay_price: "Wheelchair accessible",
+        stay_price: "",
         time_submitted: "",
         hotel_response: false,
         res_required: false,
@@ -40,9 +41,11 @@ class HotelReservations extends React.Component {
 
   }
 
-  getTabels = (item) => {
+    getTabels = (item) => {
+        let fields = ["id", "stay_price", "time_submitted", "hotel_response", "check_in", "check_out", "num_rooms",
+            "adults", "children", "extra_beds", "canceled", "no_show", "view", "confirmed", "problem"];
     let map = [];
-    map.push(<RMTable tabledata={item} />);
+        map.push(<RMTable fields={fields} tabledata={item} />);
     return map;
   }
 

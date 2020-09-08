@@ -25,11 +25,12 @@ const getHeader = (headers) => {
   return map;
 }
 
-const getData = (rowdata,rowDataKeys) => {
+const getData = (rowdata, rowDataKeys) => {
+    
     let map = [];
     let key = 1;
     Object.keys(rowdata).forEach((name) => {
-        let mKey = rowdata[name] + key;
+        let mKey = rowdata.key + key;
         if (rowDataKeys.indexOf(name) != -1) {
             map.push(<div key={mKey} className="RMSectionCell">{rowdata[name]}</div>);
         }
@@ -59,16 +60,20 @@ const getTable = (item,index,keys) => {
   let map = [];
   let lkey = "index_"+index;
     map.push(<div key={lkey} className="RMSectionTable">{getInitTable(item,keys)}</div>);
-  
   return map;
 }
 
-function RMTable({ tabledata, keys }) {
+function RMTable({ tabledata, fields }) {
   return (
     <Container>
-          {getTable(tabledata, tabledata.key, ["display_name"] )}
+          {getTable(tabledata, tabledata.key, fields )}
     </Container>
   );
 }
+
+RMTable.propTypes = {
+    tabledata: PropTypes.object,
+    fields: PropTypes.array
+};
 
 export default RMTable;

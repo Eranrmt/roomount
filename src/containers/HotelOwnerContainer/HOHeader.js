@@ -26,7 +26,6 @@ class HOHeader extends React.Component {
   }
 
     render() {
-      debugger;
     let selectedIndex = this.state.selectedIndex;
   return (
     <div className="RMHOHeaderRow">

@@ -6,10 +6,10 @@
     --weight-label-font: 400;
     --ho_header_font_size: 20px;
     --ho_header_font_weight: 600;
-    --section_table_odd_color: #2044ee;
-    --section_table_odd_background_color: #ddddcc;
-    --section_table_even_color: #ff6a00;
-    --section_table_even_background_color: #ddddcc;
+    --section_table_odd_color: #333a56;
+    --section_table_odd_background_color: #ffffff;
+    --section_table_even_color: #ffffff;
+    --section_table_even_background_color: #333a56;
     --static_text_background: #eeeedd;
     --static-text-foreground: #000000;
     --secondary_header_menu_background: rgb(8,75,138,0.2);

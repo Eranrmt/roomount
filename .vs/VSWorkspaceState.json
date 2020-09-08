@@ -3,9 +3,14 @@
     "",
     "\\src",
     "\\src\\components",
-    "\\src\\components\\RMLink",
-    "\\src\\components\\RMTable"
+    "\\src\\components\\Header",
+    "\\src\\components\\LabeledInput",
+    "\\src\\components\\RMTable",
+    "\\src\\containers",
+    "\\src\\containers\\App",
+    "\\src\\containers\\AuthPage",
+    "\\src\\containers\\HotelOwnerContainer"
   ],
-  "SelectedNode": "\\src\\components\\RMLink\\index.js",
+  "SelectedNode": "\\src\\containers\\App\\RoommountUtil.js",
   "PreviewInSolutionExplorer": false
 }

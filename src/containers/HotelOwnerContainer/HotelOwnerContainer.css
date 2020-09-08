@@ -109,7 +109,7 @@
 
 .RMSectionCell {
   display: table-cell;
-  border: 1px red solid;
+  border: 1px #aaaaaa solid;
   text-align: center;
 }
 

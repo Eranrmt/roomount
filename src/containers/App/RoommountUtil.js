@@ -4,7 +4,6 @@ import RMCheck from '../../components/RMCheck'
 import RMLabel from '../../components/RMLabel'
 
 export const getClasses = (selectedIndex, index) => {
-    debugger;
   if (!selectedIndex) {
       return "RMHOContentTable RMHide";
   }

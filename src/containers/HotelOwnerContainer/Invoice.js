@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom';
 import { createForm, getClasses } from '../App/RoommountUtil.js';
 
 
-const content = [{ id: "invoice1", displayName: 'Year', type: "range", range: "2010-2040", direction: "desc"},
-    { id: "invoice2", displayName: 'Month', type: "range", range: "1-12" }];
+const content = [{ key:"inv1", id: "invoice1", displayName: 'Year', type: "range", range: "2010-2040", direction: "desc"},
+    { key:"inv2", id: "invoice2", displayName: 'Month', type: "range", range: "1-12" }];
 
 const INDEX = "1";
 
@@ -19,7 +19,6 @@ class Invoice extends React.Component {
   }
 
     render() {
-        debugger;
         let displayClass = getClasses(this.props.selected, INDEX);
         return (
             <div className={displayClass}>
