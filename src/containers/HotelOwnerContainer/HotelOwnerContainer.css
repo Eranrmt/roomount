@@ -108,9 +108,11 @@
 }
 
 .RMSectionCell {
-  display: table-cell;
-  border: 1px #aaaaaa solid;
-  text-align: center;
+    display: table-cell;
+    border: 1px #aaaaaa solid;
+    text-align: center;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 }
 
 .RMSectionRow:nth-child(odd) {
@@ -121,4 +123,16 @@
 .RMSectionRow:nth-child(even) {
   color: var(--section_table_even_color);
   background-color: var(--section_table_even_background_color);
+}
+
+.RMRefIconLink {
+    cursor: pointer;
+}
+
+.RMRefIconButtonWrapper {
+    cursor: pointer;
+    background-color: transparent;
+    color:white;
+    border: none;
+    margin-bottom: 0.5em;
 }

@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { getClasses } from '../App/RoommountUtil.js';
 import RMTable from '../../components/RMTable';
+
 const INDEX = "3";
 
 const content = {
@@ -11,7 +12,13 @@ const content = {
             { name: "Type" }, { name: "Beds" }, { name: "Remarks" }, { name: "Features & Amenities" },
             { name: "Room" }, { name: "Rate plans" }, { name: "Quantity" }, { name: "Delete" }],
         items:
-            [{ key: "Room1", type: "Double", beds: "2", remarks: "", features: "Bathrobe", room: "ref", rate: "ref", quantity: "ref", delete: "ref" },
+            [{
+                key: "Room1", type: "Double", beds: "2", remarks: "", features: "Bathrobe",
+                room: ['{"type": "ref",         "href": "RMAddRoom"         }'],
+                rate: ['{"type": "ref",         "href": "RMAddRate"         }'],
+                quantity: ['{"type": "ref",     "href": "RMAddQuantity"     }'],
+                delete: ['{"type":"ref",        "href": "RMDeleteRoomType"  }']
+            },
             ]
     }]
 }

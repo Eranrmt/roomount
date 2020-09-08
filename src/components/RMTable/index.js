@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Container } from './styles';
+import { Container } from './styles';
 
+import { Icon } from 'react-icons-kit'
+import { pencil } from 'react-icons-kit/fa/pencil'
 
 const getYesNo = (boolvalue) => {
   if (boolvalue) {
@@ -25,14 +27,48 @@ const getHeader = (headers) => {
   return map;
 }
 
+const getParent = (tag, target) => {
+    if (target === null) {
+        return null;
+    } 
+    if (!target) {
+        return null;
+    }
+    if (target.tagName.toLowerCase().trim() === tag.toLowerCase().trim()) {
+        return target;
+    }
+    debugger;
+    return getParent(tag, target.parentElement);
+}
+
+const refClick = (e) => {
+    let ele = getParent("button ", e.target);
+    if (ele == null) {
+        return;
+    }
+    let href = ele.getAttribute("href");
+    window.location.href = "./" + href;
+}
+
 const getData = (rowdata, rowDataKeys) => {
-    
     let map = [];
     let key = 1;
     Object.keys(rowdata).forEach((name) => {
         let mKey = rowdata.key + key;
         if (rowDataKeys.indexOf(name) != -1) {
-            map.push(<div key={mKey} className="RMSectionCell">{rowdata[name]}</div>);
+            let val = rowdata[name];
+            if (typeof val === "object") {
+                let json = JSON.parse(val[0]);
+                let href = json.href;
+                map.push(
+                    <div key={mKey} className="RMSectionCell">
+                        <button href={href} onClick={refClick} className="RMRefIconButtonWrapper" >
+                            <Icon href={href} className="RMRefIconLink" icon={pencil}/>
+                        </button>
+                    </div>);
+            } else {
+                map.push(<div key={mKey} className="RMSectionCell">{rowdata[name]}</div>);
+            }
         }
       key++;
   });

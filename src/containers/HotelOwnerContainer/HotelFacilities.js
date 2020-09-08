@@ -173,7 +173,6 @@ class HotelFacilities extends React.Component {
   getTables = () => {
       let map = [];
       let fields = ["display_name", "available", "free","at_add_cost","res_required"];
-      debugger;
     content.data.forEach((item) => {
       if (item.topic !== "") {
         map.push(
