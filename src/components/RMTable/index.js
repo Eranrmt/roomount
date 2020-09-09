@@ -37,7 +37,6 @@ const getParent = (tag, target) => {
     if (target.tagName.toLowerCase().trim() === tag.toLowerCase().trim()) {
         return target;
     }
-    debugger;
     return getParent(tag, target.parentElement);
 }
 

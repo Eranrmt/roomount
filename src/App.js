@@ -8,7 +8,13 @@ import { Pane } from 'evergreen-ui';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Home } from './routes/Home';
+
 import HOMain from './containers/HotelOwnerContainer' 
+import HOAddQuantity from './containers/HotelOwnerContainer/rooms/HOAddQuantity/HOAddQunatity' 
+import HOAddRate from './containers/HotelOwnerContainer/rooms/HOAddRate/HOAddRate' 
+import HOAddRoom from './containers/HotelOwnerContainer/rooms/HOAddRoom/HOAddRoom' 
+import HODeleteRoomType from './containers/HotelOwnerContainer/rooms/HODeleteRoomType/HODeleteRoomType' 
+
 import { SignIn } from './routes/SignIn';
 import { SignUp } from './routes/SignUp';
 import { Reserve } from './routes/Reserve';
@@ -39,7 +45,12 @@ function App() {
                     <Route path="/privacy-policy" component={RMPolicy} />
                     <Route path="/terms-of-use" component={RMTerms} />
                     <Route path="/faq" component={RMFAQ} />
-                    <Route path="/contact-us" component={RMContact} />
+                      <Route path="/contact-us" component={RMContact} />
+
+                      <Route path="/HOAddRoom" component={HOAddRoom} />
+                      <Route path="/HOAddRate" component={HOAddRate} />
+                      <Route path="/HOAddQuantity" component={HOAddQuantity} />
+                      <Route path="/HODeleteRoomType" component={HODeleteRoomType} />
                       
                   </Switch>
                </Pane>

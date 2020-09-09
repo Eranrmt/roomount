@@ -14,10 +14,10 @@ const content = {
         items:
             [{
                 key: "Room1", type: "Double", beds: "2", remarks: "", features: "Bathrobe",
-                room: ['{"type": "ref",         "href": "RMAddRoom"         }'],
-                rate: ['{"type": "ref",         "href": "RMAddRate"         }'],
-                quantity: ['{"type": "ref",     "href": "RMAddQuantity"     }'],
-                delete: ['{"type":"ref",        "href": "RMDeleteRoomType"  }']
+                room: ['{"type": "ref",         "href": "HOAddRoom"         }'],
+                rate: ['{"type": "ref",         "href": "HOAddRate"         }'],
+                quantity: ['{"type": "ref",     "href": "HOAddQuantity"     }'],
+                delete: ['{"type":"ref",        "href": "HODeleteRoomType"  }']
             },
             ]
     }]
