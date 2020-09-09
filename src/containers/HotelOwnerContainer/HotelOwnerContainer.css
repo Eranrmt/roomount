@@ -43,7 +43,6 @@
   padding-bottom: 1em;
   margin-top: 1em;
   background-color: var( --color-static-background);
-  width: 100%;
 }
 
 .RMHOContentRow {
@@ -135,4 +134,15 @@
     color:white;
     border: none;
     margin-bottom: 0.5em;
+}
+
+.RMChoiceLabel {
+    display:block;
+}
+
+.RMMultipleChoiceContainer {
+    border: 1px solid #dddddd;
+    padding: 0.5em;
+    margin-left: 0.1em;
+    width: 10em;
 }

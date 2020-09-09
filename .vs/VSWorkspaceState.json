@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\components",
-    "\\src\\components\\LabeledInput",
     "\\src\\containers",
+    "\\src\\containers\\App",
     "\\src\\containers\\HotelOwnerContainer",
     "\\src\\containers\\HotelOwnerContainer\\rooms",
     "\\src\\containers\\HotelOwnerContainer\\rooms\\HOAddQuantity",
@@ -12,6 +11,6 @@
     "\\src\\containers\\HotelOwnerContainer\\rooms\\HOAddRoom",
     "\\src\\containers\\HotelOwnerContainer\\rooms\\HODeleteRoomType"
   ],
-  "SelectedNode": "\\src\\containers\\HotelOwnerContainer\\rooms\\HODeleteRoomType\\HODeleteRoomType.js",
+  "SelectedNode": "\\src\\containers\\HotelOwnerContainer\\rooms\\HOAddRate\\HOAddRate.js",
   "PreviewInSolutionExplorer": false
 }
