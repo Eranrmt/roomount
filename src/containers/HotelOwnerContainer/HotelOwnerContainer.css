@@ -56,8 +56,13 @@
 }
 
 .RMHOActionButton {
-
-}
+    position: absolute;
+    bottom: 5em;
+    right: 5em;
+    background-color: var(--action_button_background_color);
+    color: var(--action_button_color);
+    line-height: 2.25em;
+    width: 3.5em;}
 
 .HOItemInputCell {
     margin: 0.5em;
@@ -140,9 +145,16 @@
     display:block;
 }
 
+.RMMultipleChoiceOuter {
+    max-height: 9em;
+    height: 9em;
+}
+
 .RMMultipleChoiceContainer {
     border: 1px solid #dddddd;
     padding: 0.5em;
     margin-left: 0.1em;
     width: 10em;
+    overflow: auto;
+    height: 100%;
 }

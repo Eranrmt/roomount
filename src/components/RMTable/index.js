@@ -5,13 +5,6 @@ import { Container } from './styles';
 import { Icon } from 'react-icons-kit'
 import { pencil } from 'react-icons-kit/fa/pencil'
 
-const getYesNo = (boolvalue) => {
-  if (boolvalue) {
-    return "Yes";
-  }
-  return "No";
-}
-
 const getHeaderContent = (headers) => {
     let map = [];
     headers.forEach((head) => {
@@ -54,7 +47,7 @@ const getData = (rowdata, rowDataKeys) => {
     let key = 1;
     Object.keys(rowdata).forEach((name) => {
         let mKey = rowdata.key + key;
-        if (rowDataKeys.indexOf(name) != -1) {
+        if (rowDataKeys.indexOf(name) !== -1) {
             let val = rowdata[name];
             if (typeof val === "object") {
                 let json = JSON.parse(val[0]);

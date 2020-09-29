@@ -14,4 +14,6 @@
     --static-text-foreground: #000000;
     --secondary_header_menu_background: rgb(8,75,138,0.2);
     --section_title_color: #000010;
+    --action_button_background_color: #333a56;
+    --action_button_color: #ffffff;
 }

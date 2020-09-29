@@ -14,9 +14,6 @@ import { compose } from 'redux';
 import './RMHome.css'
 
 import { MainPanel, InnerContainer, Container } from './styles';
-import RMLink from '../../components/RMLink';
-
-
 
 export function HomePage({ authService }) {
   // console.log(authService);
@@ -25,14 +22,22 @@ export function HomePage({ authService }) {
   const [endDateInput, setEndDateInput] = useState(null);
 
   const handleClick = (e) => {
-    /*let body = {
-      "username": "naremnar1@walla.co.il",
-      "password": "Q1"
-    }*/
-    //fetchData("login", onSuccess, onFaliure,body,"POST");
-     
     window.location.href = "./hotelInfo";
-  };
+    };
+
+    const doNavigate = (e) => {
+        let key = e.target.getAttribute("id");
+        switch (key) {
+            case "RMHow": {
+                window.location.href = "./how";
+                return;
+            }
+            case "RMBenefit": {
+                window.location.href = "./benefit";
+                return;
+            }
+        }
+    }
 
   return (
     <Container>
@@ -41,10 +46,10 @@ export function HomePage({ authService }) {
           <div className="RMMainTable">
             <div className="RMActionRow">
               <div className="RMActionCell">
-                <button className="actionButton hwd">How we differ</button>
+                   <button id="RMHow" onClick={doNavigate} className="actionButton hwd">How we differ</button>
               </div>
               <div className="RMActionCell">
-                <button className="actionButton">Hotelier benefit</button>
+                   <button id="RMBenefit" onClick={doNavigate}className="actionButton">Hotelier benefit</button>
               </div>
               <div className="RMActionCell">
                 <button className="actionButton">Add your property</button>

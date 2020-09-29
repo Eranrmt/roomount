@@ -30,7 +30,7 @@ const getMultipleChoiceList = (choices) => {
 }
 
 const getContentRow = (value) => {
-    if (value.type == "check") {
+    if (value.type === "check") {
         return (
             <div key={'x' + value.id} className='RMHOContentRow' >
                 <div className='RMHOContentCell' ><span key={'y' + value.id}></span></div >
@@ -38,7 +38,7 @@ const getContentRow = (value) => {
             </div >
         )
     }
-    else if (value.type == "range") {
+    else if (value.type === "range") {
         return (
             <div key={'x' + value.id} className='RMHOContentRow' >
                 <div className='RMHOContentCell' ><RMLabel clzz="RMHOLabel" id={'y' + value.id} label={value.displayName} /></div >
@@ -46,8 +46,9 @@ const getContentRow = (value) => {
             </div >
         )
     }
-    else if (value.type == "MultiplSelectionList") {
-        return (<div><label>Features & Amenities</label>
+    else if (value.type === "MultiplSelectionList") {
+        let title = value.displayName;
+        return (<div className="RMMultipleChoiceOuter"><label>{title}</label>
             <div className="RMMultipleChoiceContainer">
                 {getMultipleChoiceList(value.choices)}
             </div></div>)

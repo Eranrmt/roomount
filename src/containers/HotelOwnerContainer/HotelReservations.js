@@ -1,7 +1,7 @@
 import "./HotelOwnerContainer.css"
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createForm, getClasses } from '../App/RoommountUtil.js';
+import { getClasses } from '../App/RoommountUtil.js';
 import RMTable from '../../components/RMTable';
 
 const INDEX = "4";
