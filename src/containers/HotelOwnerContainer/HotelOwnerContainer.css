@@ -26,9 +26,7 @@
   }
 
 .RMHOWorkarea {
-    width: calc(100% - 0em);
-    height: calc(100% - 10em);
-    max-height: 465px;
+    width: 100%;
     margin-top: 0em;
     margin-left: 0em;
     margin-right: 5em;
@@ -51,8 +49,9 @@
 }
 
 .RMHOContentCell {
-  display: table-cell;
+  display: inline-block;
   margin-bottom: 0.5em;
+  width: 100%;
 }
 
 .RMHOActionButton {
@@ -62,11 +61,22 @@
     background-color: var(--action_button_background_color);
     color: var(--action_button_color);
     line-height: 2.25em;
-    width: 3.5em;}
+    width: 3.5em;
+    cursor: pointer;
+}
 
-.HOItemInputCell {
-    margin: 0.5em;
-    border-radius: 1em;
+    .RMHOActionButton:hover {
+        color: var(--hover_highlight);
+    }
+    .HOItemInputCell {
+    margin-bottom: 0.5em;
+    margin-left: 0.5em;
+    border-radius: 0.2em;
+    float: right;
+}
+
+.HOItemInputCell:hover {
+    border-color: var(--hover_highlight);
 }
 
 .RMHide {
@@ -78,8 +88,8 @@
   margin-right: 0.5em;
 }
 
-.RMHOHeaderItem[isselected="true"] {
-  color: var( --selected_ho_color);
+.RMCheck:hover {
+   border-color: var(--hover_highlight);
 }
 
 .RMHOLabel {
@@ -87,12 +97,18 @@
   font-weight: var(--weight-label-font);
 }
 
+.RMHOLabel:hover {
+    color: var(--hover_highlight);
+}
+
 .RMSelector {
    width: 100%;
    width: 100%;
 }
-
-.RMHOTableTopic {
+.RMSelector:hover {
+    border-color: var(--hover_highlight);
+}
+    .RMHOTableTopic {
     font-size: 20px;
     margin-top: 2em;
     color: var(--section_title_color);
@@ -119,9 +135,18 @@
     padding-right: 0.5em;
 }
 
+.RMSectionCell:hover {
+    color: var(--hover_highlight);
+}
+
+
+    .RMHOTableCell {
+        display: table-cell;
+    }
+
 .RMSectionRow:nth-child(odd) {
-  color: var(--section_table_odd_color);
-  background-color: var(--section_table_odd_background_color);
+    color: var(--section_table_odd_color);
+    background-color: var(--section_table_odd_background_color);
 }
 
 .RMSectionRow:nth-child(even) {
@@ -129,6 +154,9 @@
   background-color: var(--section_table_even_background_color);
 }
 
+.RMRefIconLink:hover {
+    color: var(--hover_highlight);
+}
 .RMRefIconLink {
     cursor: pointer;
 }
@@ -148,13 +176,17 @@
 .RMMultipleChoiceOuter {
     max-height: 9em;
     height: 9em;
+    width: 100%;
+}
+
+.RMHOChoiceTitle {
 }
 
 .RMMultipleChoiceContainer {
     border: 1px solid #dddddd;
-    padding: 0.5em;
     margin-left: 0.1em;
-    width: 10em;
+    margin-top: 0.2em;
+    width: 100%;
     overflow: auto;
     height: 100%;
 }

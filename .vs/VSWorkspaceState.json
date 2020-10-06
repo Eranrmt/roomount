@@ -3,14 +3,9 @@
     "",
     "\\src",
     "\\src\\components",
-    "\\src\\containers",
-    "\\src\\containers\\App",
-    "\\src\\containers\\HotelOwnerContainer",
-    "\\src\\containers\\HotelOwnerContainer\\rooms",
-    "\\src\\containers\\HotelOwnerContainer\\rooms\\HOAddRoom",
-    "\\src\\static",
-    "\\src\\static\\content"
+    "\\src\\components\\RMBlog",
+    "\\src\\containers"
   ],
-  "SelectedNode": "\\src\\containers\\App\\RoommountUtil.js",
+  "SelectedNode": "\\src\\components\\RMBlog\\index.js",
   "PreviewInSolutionExplorer": false
 }

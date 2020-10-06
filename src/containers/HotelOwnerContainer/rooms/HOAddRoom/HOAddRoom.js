@@ -70,9 +70,11 @@ class HOAddRoom extends React.Component {
     render() {
         let displayClass = "RMHOContentTable";
         return (
-            <div className={displayClass}>
-                {createForm(content)}
-                <button className="RMHOActionButton">Save</button>
+            <div displayClass = "RMHOWorkarea">
+                <div className={displayClass}>
+                    {createForm(content)}
+                    <button className="RMHOActionButton">Save</button>
+                </div>
             </div>
         );
     }
