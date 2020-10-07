@@ -86,11 +86,14 @@ export function HomePage({ authService }) {
           <div className="RMactionsBar">
             <div className="actionLeft">
               <label className="RMYourStay">Your Stay</label>
-              <DateRangePicker startDate={startDateInput}
+                          <DateRangePicker
+                              openDirection="up"
+                              popperPlacement="top-start"
+                              startDate={startDateInput}
                 startDateId="your_unique_start_date_id"
                 endDate={endDateInput}
                 endDateId="your_unique_end_date_id"
-                onDatesChange={({ startDate, endDate }) => {
+                              onDatesChange={({ startDate, endDate }) => {
                   setStartDateInput(startDate);
                   setEndDateInput(endDate);
                 }}
