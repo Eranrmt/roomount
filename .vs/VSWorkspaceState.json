@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\components",
-    "\\src\\components\\RMTable",
-    "\\src\\containers",
-    "\\src\\containers\\App",
-    "\\src\\containers\\HomePage",
-    "\\src\\containers\\HotelOwnerContainer",
-    "\\src\\containers\\HotelOwnerContainer\\rooms",
-    "\\src\\containers\\HotelOwnerContainer\\rooms\\HOAddRate"
+    "\\src\\routes",
+    "\\src\\routes\\Home",
+    "\\src\\routes\\Home\\components",
+    "\\src\\routes\\Home\\components\\HotelItem",
+    "\\src\\routes\\Home\\components\\HotelPage",
+    "\\src\\routes\\Home\\components\\HotelPage\\RoomsTable",
+    "\\src\\services",
+    "\\src\\services\\search"
   ],
-  "SelectedNode": "\\src\\containers\\HomePage\\index.js",
+  "SelectedNode": "\\src\\containers",
   "PreviewInSolutionExplorer": false
 }
